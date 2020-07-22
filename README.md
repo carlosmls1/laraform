@@ -4,7 +4,7 @@ required as well as frequent addition and deduction of form fields.
 
 ## Installation
 ```
-composer require "sujan/laraform"
+composer require "carlosmls1/laraform"
 ```
 
 As `sujan/laraform` package is based on `laravelcollective/html` you have to add your new 
@@ -13,7 +13,7 @@ provider to the providers array of config/app.php:
 ```
 'providers' => [
     // ...
-    Sujan\LaraForm\ServiceProvider::class,
+    carlosmls1\LaraForm\ServiceProvider::class,
     Collective\Html\HtmlServiceProvider::class,
     // ...
 ],

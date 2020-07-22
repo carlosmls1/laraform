@@ -1,4 +1,4 @@
-<?php namespace Sujan\LaraForm;
+<?php namespace carlosmls1\LaraForm;
 
 use Collective\Html\FormBuilder;
 use Illuminate\Support\HtmlString;
@@ -15,7 +15,7 @@ class LaraForm
      * Create a new form builder instance.
      *
      * @param FormBuilder $formBuilder
-     * @param \Sujan\LaraForm\Parser $yamlParser
+     * @param \carlosmls1\LaraForm\Parser $yamlParser
      */
     public function __construct(FormBuilder $formBuilder, Parser $yamlParser)
     {
@@ -76,9 +76,9 @@ class LaraForm
         $builder .= $this->getOpeningTag($name, $field);
         $builder .= $this->formBuilder->label(isset($field->label) ? $field->label : '');
         $builder .= $this->formBuilder->textarea($name, $value = null, $options = ['class' => 'form-control', 'cols' => 50, 'rows' => 5]);
-        $builder .= $this->getClosingTag($name); 
+        $builder .= $this->getClosingTag($name);
 
-        return $builder;    
+        return $builder;
     }
 
     /**
@@ -103,8 +103,8 @@ class LaraForm
         } else {
             $builder .= '</div>';
         }
-        
-        return $builder;                   
+
+        return $builder;
     }
 
     /**
@@ -124,7 +124,7 @@ class LaraForm
             ->select($name,
                 $field->options,
                 $selected = null,
-                ['class' => 'form-control '.get_class($field)]   
+                ['class' => 'form-control '.get_class($field)]
             );
         $builder .= $this->getClosingTag($name);
 
@@ -337,7 +337,7 @@ class LaraForm
         } else {
             return (object)['class' => '', 'message' => ''];
         }
-    } 
+    }
 
     /**
      * Determine whether the form element with the given name has any validation errors
@@ -350,7 +350,7 @@ class LaraForm
         if (!session()->has('errors')) {
             return false;
         }
-        
+
         // Get errors session
         $errors = $this->getErrorsSession();
 

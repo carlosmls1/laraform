@@ -1,4 +1,4 @@
-<?php namespace Sujan\LaraForm;
+<?php namespace carlosmls1\LaraForm;
 
 use Symfony\Component\Yaml\Parser as SymfonyParser;
 

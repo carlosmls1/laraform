@@ -1,6 +1,6 @@
 <?php
 
-namespace Sujan\LaraForm;
+namespace carlosmls1\LaraForm;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Form;
